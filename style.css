@@ -1,0 +1,25 @@
+*{
+	box-sizing: border-box;
+}
+
+:root {
+	--main-bg-color: #c8cfdb;
+	--main-area-color: #9cd6ac;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background-color: var(--main-bg-color);;
+}
+
+#wordStore {
+	width: 80vh;
+	height: 40vh;
+	background-color: var(--main-area-color);
+}
+
+
