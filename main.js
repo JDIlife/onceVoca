@@ -9,6 +9,41 @@ const titleInput = document.getElementById("titleInput");
 const optionsBtn = document.getElementById("optionsBtn");
 const searchBtn = document.getElementById("searchBtn");
 
+// push the word with enter and wordInputBtn
+
+let wordList = [];
+
+let pushWord = () => {
+	if(searchInput.value != ""){
+		let text = searchInput.value;
+		wordList.push(text);
+	}
+	return wordList;
+}
+
+searchInput.addEventListener('keypress', (e) => {
+	if(e.key == "Enter"){
+		let wordList = pushWord(e);
+		console.log("word list = ", wordList)
+	}
+})
+
+wordInputBtn.addEventListener('click', (e) => {
+	let wordList = pushWord();
+	console.log("word list with click = ", wordList)
+})
+
+// create temporary word store
+
+// selecte the folder to store
+
+// input title
+
+// select the option
+
+// start search with searchBtn
+
+
 const getData = async (word) => {
 	let response = await fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + word)
 	let output;
